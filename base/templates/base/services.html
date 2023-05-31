@@ -1,0 +1,72 @@
+{% extends 'base/index.html' %}
+	{% block title %} Services &#x2022; Hibiscus Interior Solutions {% endblock title %}
+	{% block content %}
+		<div class="colorlib-services">
+			<div class="colorlib-narrow-content">
+				<!-- Heading -->
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+						<span class="heading-meta">Services</span>
+						<h2 class="colorlib-heading">Here are some of our expertise</h2>
+					</div>
+				</div>
+				<!-- Services Content -->
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-10">
+						<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+							<div class="colorlib-icon">
+								<!-- <i class="icon-home"></i> -->
+								<i class="icon-home-outline"></i>
+								
+							</div>
+							<div class="colorlib-text">
+								<h3>Residential Interior Service</h3>
+								<p>We offer highly innovative and contemporary residential interior with elegant touch according to the taste and personality of clients to suit their needs and expectations.</p>
+							</div>
+						</div>
+					</div>					
+					<div class="col-md-10">
+						<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+							<div class="colorlib-icon">
+								<!-- <i class="flaticon-worker"></i> -->
+								<i class="icon-shop"></i>
+								
+							</div>
+							<div class="colorlib-text">
+								<h3>Commercial Interior Service</h3>
+								<p>Commercial interior design is about designing and developing unique and impressive interiors for commercial environments, from hotels, bars, restaurants etc. We work closely with our clients and their brand teams to build compelling, relevant spaces.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-10">
+						<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+							<div class="colorlib-icon">
+								<!-- <i class="flaticon-worker"></i> -->
+								<i class="flaticon-engineering"></i>
+							</div>
+							<div class="colorlib-text">
+								<h3>Retail Interior Service</h3>
+								<p>Our Retail Interior Designing Services with the blend of artistic talent and creativity. The process of molding the experience of interior space and giving it a perfect shape is done by our group team of experienced architectures and designers.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Services Images -->
+				<p>Underneath our expertise, we offer much & much more...</p>
+				<br>
+				<div class="row">
+					{% for service_image in service_images %}
+					<div class="col-md-4">
+						<div class="services-wrap animate-box" data-animate-effect="fadeInRight">
+							<div class="services-img" style="background-image: url('{{service_image.source}}')" title="{{service_image.desc}}"></div>
+							<div class="desc">
+								<h3>{{service_image}}</h3>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	{% endblock content %}
+

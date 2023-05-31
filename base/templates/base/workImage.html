@@ -1,0 +1,19 @@
+{% extends 'base/index.html' %}
+{% block title %} {{work_image}} &#x2022; Hibiscus Interior Solutions {% endblock title %}
+{% block content %}
+    <div class="colorlib-work">
+        <div class="colorlib-narrow-content">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+                    <span class="heading-meta">Project</span>
+                    <h2 class="colorlib-heading">{{work_image}}</h2>
+                </div>
+            </div>
+            <div class="row row-bottom-padded-md">
+                <div class="col-md-6">
+                    <img src="{{work_image.source}}" alt="{{work_image.desc}}" style="height: 550px">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

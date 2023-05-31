@@ -1,0 +1,26 @@
+{% load static %}
+<!-- Left part == Navbar + Navbar Footer (Copyright + Social Media Links) -->
+
+<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+    <h1 id="colorlib-logo">
+        <a href="{% url 'base:home' %}">
+            <img style="height: 60px; width: 60px" src="{% static 'img/logo.png' %}" alt="Logo Yellow Hibiscus flower">
+        </a>
+    </h1>
+    <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+            <li class="{{hibHome_active}}"><a href="{% url 'base:home' %}">Home</a></li>
+            <li class="{{hibAbout_active}}"><a href="{% url 'base:about' %}">About</a></li>
+            <li class="{{hibWhatWeRender_active}}"><a href="{% url 'base:render' %}">We Render</a></li>
+            <li class="{{hibServices_active}}"><a href="{% url 'base:services' %}">Services</a></li>
+            <li class="{{hibTurnkey_active}}"><a href="{% url 'base:turnkey' %}">Turnkey Solutions</a></li>
+            <li class="{{hibWork_active}}"><a href="{% url 'base:work' %}">Projects</a></li>
+            <li class="{{hibClient_active}}"><a href="{% url 'base:client' %}">Clients</a></li>
+            <li class="{{hibContact_active}}"><a href="{% url 'base:contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Navbar Footer == Copyright + Social Media Links -->
+    {% include 'base/navbarFooter.html' %}
+</aside>

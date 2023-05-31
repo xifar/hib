@@ -1,0 +1,76 @@
+{% extends 'base/index.html' %}
+{% load static %}
+
+	{% block title %} Contact &#x2022; Hibiscus Interior Solutions {% endblock title %}
+
+	{% block content %}
+		<!-- Contact details + Enquiry Form -->
+		<div class="colorlib-contact">
+			<div class="colorlib-narrow-content">
+				<!-- Page Heading -->
+				<div class="row">
+					<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+						<span class="heading-meta">Read</span>
+						<h2 class="colorlib-heading">Get in Touch</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-5">
+						<!-- Email ID -->
+						<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+							<div class="colorlib-icon">
+								<i class="icon-mail5"></i>
+							</div>
+							<div class="colorlib-text">
+								<p><a href="mailto:jayanttobina@gmail.com" target="_blank">info@domain.com</a></p>
+							</div>
+						</div>
+						<!-- Address -->
+						<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+							<div class="colorlib-icon">
+								<i class="icon-map"></i>
+							</div>
+							<div class="colorlib-text">
+								<p>MOHAN GARDEN, G2/62-C, SAI ENCLAVE, GALI NO-3, UTTAM NAGAR, New Delhi, Delhi, 110059</p>
+							</div>
+						</div>
+						<!-- Phone number -->
+						<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+							<div class="colorlib-icon">
+								<i class="icon-phone"></i>
+							</div>
+							<div class="colorlib-text">
+								<p><a href="tel://">+91-9968197814</a></p>
+							</div>
+						</div>
+					</div>
+					<!-- Enquiry Form -->
+					<div class="col-md-7 col-md-push-1">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
+								<form action="" method="POST">
+									{% csrf_token %}
+									{% for field in form %}
+										<div class="form-group">
+											{{field}}
+										</div>
+									{% endfor %}
+									<div class="form-group">
+										<input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
+									</div>
+								</form>
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Google Map iframe -->
+		<div>
+			<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.4894435783904!2d77.03621799999999!3d28.645060200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d050c89edaa81%3A0x5ebcebb834c2afce!2sc%20g%2C%20G-2%2F3%2C%20Gali%20No.%203%2C%20Sethi%20Enclave%2C%20Vikas%20Nagar%2C%20Vikas%20Kunj%2C%20Uttam%20Nagar%2C%20Delhi%2C%20110059!5e0!3m2!1sen!2sin!4v1684337939090!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>	
+	{% endblock content %}
+
+	{% block indexContact %}
+	{% endblock indexContact %}

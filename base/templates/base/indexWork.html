@@ -1,0 +1,28 @@
+<div class="colorlib-work">
+    <div class="colorlib-narrow-content">
+        <!-- Heading -->
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+                <span class="heading-meta">Projects</span>
+                <h2 class="colorlib-heading animate-box">Our Work</h2>
+            </div>
+        </div>
+        <!-- Images -->
+        <div class="row">
+            {% for sample in work_images_samples %}
+            <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                <div class="project" style="background-image: url('{{sample.source}}');" title="{{sample.desc}}">
+                    <div class="desc">
+                        <div class="con">
+                            <h3><a href="{% url 'base:work_image' sample.id %}" target="_blank">{{sample}}</a></h3>
+                            <span>{{sample.desc}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <br><br>
+        <p><a href="{% url 'base:work' %}" class="btn btn-primary btn-learn">See More Work <i class="icon-chevron-right"></i></a></p>
+    </div>
+</div>

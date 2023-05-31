@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+        <ul class="pagination">
+            {% if work_images_perPage.has_previous %}
+            <li class=""><a href="?page=1">First</a></li>
+            <li class=""><a href="?page={{work_images_perPage.previous_page_number}}">&laquo;</a></li>
+            {% endif %}
+            {% for page in pageNo_display_list %} 
+            <li class="{% if page ==  work_images_perPage.number %} active {% endif %}"><a href="?page={{page}}">{{page}}</a></li>
+            {% endfor %}
+            {% if work_images_perPage.has_next %}
+            <li><a href="?page={{work_images_perPage.next_page_number}}">&raquo;</a></li>
+            <li><a href="?page={{work_images_perPage.paginator.num_pages}}">Last</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</div>

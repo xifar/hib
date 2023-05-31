@@ -1,0 +1,25 @@
+<!-- Flexslider on Home page-->
+
+<aside id="colorlib-hero" class="js-fullheight">
+    <div class="flexslider js-fullheight">
+        <ul class="slides">
+            {% for flex_image in flex_images %}
+                <li style="background-image: url('{{flex_image.source}}');" title="{{flex_image.desc}}">
+                    <div class="overlay"></div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 col-md-push-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+                                <div class="slider-text-inner">
+                                    <div class="desc">
+                                        <h1>Hibiscus Interior Solutions</h1>
+                                            <p><a href="{% url 'base:work' %}" class="btn btn-primary btn-learn">View Project <i class="icon-arrow-right3"></i></a></p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+      </div>
+</aside>
